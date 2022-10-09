@@ -1,6 +1,6 @@
 ﻿using Application.Services.Repositories;
 using Core.Persistence.Repositories;
-using Domain.Entities;
+using Core.Security.Entities;
 using Persistence.Contexts;
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,10 @@ using System.Threading.Tasks;
 
 namespace Persistence.Repositories
 {
-    public class BrandRepository : EfRepositoryBase<Brand, BaseDbContext>, IBrandRepository
+    public class OperationClaimRepository : EfRepositoryBase<OperationClaim, BaseDbContext>, IOperationClaimRepository
     {
-        public BrandRepository(BaseDbContext context) : base(context)
+        public OperationClaimRepository(BaseDbContext context) : base(context)
         {
         }
-        
     }
-   
 }
